@@ -19,9 +19,9 @@ class CStatusShooter
 public:
 	CStatusShooter();
 	~CStatusShooter();
+	int addToSql(std::string cpu, std::string ram, std::string temperature, std::string swap);
 private:
 	void readConfig();
-	int addToSql(std::string cpu, std::string ram, std::string temperature, std::string swap);
 	const std::string configFilePath = "/etc/statusShooter/config.yml";
 	YAML::Node configFile;
 	std::string userName;

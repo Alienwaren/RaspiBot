@@ -1,6 +1,6 @@
 $(CXX)=g++
 all: cpu ram temperature swap statusshooter
-	$(CXX) main.cpp cpu.o ram.o temperature.o swap.o statusshooter.o -o main.o -Ofast -Wall -lyaml-cpp -lglog
+	$(CXX) main.cpp cpu.o ram.o temperature.o swap.o statusshooter.o -o main.o -Ofast -Wall -lyaml-cpp -lglog -lpqxx -lpq
 cpu:
 	$(CXX) -c CCpu.cpp -o cpu.o -Ofast -Wall 
 ram:
