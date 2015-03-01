@@ -74,23 +74,33 @@ void CRam::getData(char dataType)
         onlyNumber = stream.str();
         onlyNumber += mPostGbPostfix;
         this->mRamDataCapacity = onlyNumber;
-    }
-}
-std::string CRam::getSpecificLine(int line, std::string stringCheked)
-{
-    std::istringstream stream(stringCheked);
-    std::string buffer = "";
-    std::string searched = "";
-    int i = line;
-     while (std::getline(stream, buffer)) {
-        if(i == line)
-        {
-        	searched = line;
-        	break;
+    }else if(dataType == 'n' || dataType == 'N')
+    {
+         FILE* pipe = popen(this->mPathRamData.c_str(), "r");
+        if (!pipe) return;
+        char buffer[128]{};
+        std::string result = "";
+        while(!feof(pipe)) {
+            if(fgets(buffer, 128, pipe) != NULL)
+                result += buffer;
         }
-        i++;
+        pclose(pipe);
+        std::string resultNumber = result.substr(17,result.length());
+        std::string onlyNumber = "";
+        for (int i = 0; i < resultNumber.length(); i++)
+        {
+            if(isdigit(resultNumber[i]))
+            {
+                onlyNumber += resultNumber[i];
+            }
+        }
+        float mbs = atoi(onlyNumber.c_str());
+        mbs /= 1000;
+        std::ostringstream stream;
+        stream << mbs;
+        onlyNumber = stream.str();
+        this->mRamDataCapacity = onlyNumber;
     }
-    return searched;
 }
 CRam::~CRam()
 {

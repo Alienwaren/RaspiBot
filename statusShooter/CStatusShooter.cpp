@@ -13,11 +13,16 @@ void CStatusShooter::readConfig()
 	dbName = sqlConfig["dbname"].as<std::string>();
 	tableName = sqlConfig["tablename"].as<std::string>();
 	connectionString = "dbname="+dbName+" user="+userName+" password="+password+" hostaddr="+host+" port="+port;
-	query = "INSERT INTO "+tableName+" VALUES(";
+	// query = "INSERT INTO "+tableName+" VALUES(";
 }
 int CStatusShooter::addToSql(std::string cpu, std::string ram, std::string temperature, std::string swap)
 {
 	pqxx::connection dbConn(connectionString);
+	query = "INSERT INTO "+tableName+"(\"cpuFreq\",\"ramFree\",\"temperatureValue\",\"swapUsed\") VALUES(" + cpu + "," + ram + "," + temperature + "," + swap + ");";
+	pqxx::work sender(dbConn);
+	sender.exec(query);
+	sender.commit();
+	// std::cout << query << std::endl;
 	return 0;
 }
 CStatusShooter::~CStatusShooter()

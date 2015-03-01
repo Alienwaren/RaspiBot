@@ -17,17 +17,17 @@ int main(int argc, char const *argv[])
 	CTemperature temperatureData;
 	CStatusShooter shooter;
 	int status = 0;
-	ramData.getData('M');
-	swapData.getData('M');
-	temperatureData.getTemperatureData('M');
-	processorData.ReadCpuData('M');
-	std::cout << processorData.GetCpuFreqString() << std::endl;
-	std::cout << swapData.GetmData() << std::endl;
-	std::cout << ramData.getRamDataCapacity() << std::endl;
-	std::cout << temperatureData.GetmStringTemp() << std::endl;
+	ramData.getData('N');
+	swapData.getData('N');
+	temperatureData.getTemperatureData('N');
+	processorData.ReadCpuData('N');
 	while(true)
 	{
 		shooter.addToSql(processorData.GetCpuFreqString(), ramData.getRamDataCapacity(), temperatureData.GetmStringTemp(),swapData.GetmData());
+		ramData.getData('N');
+		swapData.getData('N');
+		temperatureData.getTemperatureData('N');
+		processorData.ReadCpuData('N');
 	}
 	return status;
 }
