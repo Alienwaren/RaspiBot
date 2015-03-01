@@ -1,4 +1,4 @@
-#include "CRam.h"
+#include "../include/CRam.h"
 
 CRam::CRam()
 : mRamDataCapacity("no data")

@@ -1,4 +1,4 @@
-#include "CTemperature.h"
+#include "../include/CTemperature.h"
 
 CTemperature::CTemperature()
 : mStringTemp("")

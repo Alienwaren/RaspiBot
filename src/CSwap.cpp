@@ -1,4 +1,4 @@
-#include "CSwap.h"
+#include "../include/CSwap.h"
 
 CSwap::CSwap()
 {

@@ -1,4 +1,4 @@
-#include "CCpu.h"
+#include "../include/CCpu.h"
 
 CCpu::CCpu()
     : mCpuFreqString(""), mYamlFreqString("")
@@ -83,6 +83,35 @@ void CCpu::ReadCpuData(char returnType)
                 stream << ghz;
                 std::string ghzString = stream.str();
                 this->mCpuFreqString = ghzString + this->mGhzFreqPostFix;
+                close(fd);
+                LOG(INFO) << "Closing file";
+            }
+        }else
+        {
+            LOG(WARNING) << "Invalid file descriptor, cannot open file";
+
+        }
+    }else if(returnType == 'n' || returnType == 'N')
+    {
+        LOG(INFO) << "Reading data as MHz without suffix";
+        int fd = open(mCpuPath.c_str(), O_RDONLY);
+        ssize_t readBytes;
+        LOG(INFO) << "Opening cpu file...";
+        if(fd != -1)
+        {
+            LOG(INFO) << "Opening successfull";
+            char buffer[10]{};
+            readBytes = read(fd, &buffer, sizeof(buffer));
+            if(readBytes > -1)
+            {
+                std::string frequency(buffer);
+                frequency.erase(std::remove(frequency.begin(), frequency.end(), '\n'), frequency.end());
+                int temp = atoi(frequency.c_str());
+                int mhz = temp/1000;
+                std::ostringstream stream;
+                stream << mhz;
+                std::string mhzString = stream.str();
+                this->mCpuFreqString = mhzString;
                 close(fd);
                 LOG(INFO) << "Closing file";
             }

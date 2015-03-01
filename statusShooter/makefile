@@ -1,13 +1,15 @@
-$(CXX)=g++
+CXX=g++
+SRC=../src
+INCL=../include
 all: cpu ram temperature swap statusshooter
-	$(CXX) main.cpp cpu.o ram.o temperature.o swap.o statusshooter.o -o main.o -Ofast -Wall -lyaml-cpp -lglog -lpqxx -lpq
+	$(CXX) main.cpp cpu.o ram.o temperature.o swap.o statusshooter.o -o main.o -I$(INCL) -Ofast -Wall -lyaml-cpp -lglog -lpqxx -lpq
 cpu:
-	$(CXX) -c CCpu.cpp -o cpu.o -Ofast -Wall 
+	$(CXX) -c $(SRC)/CCpu.cpp -o cpu.o -Ofast -Wall 
 ram:
-	$(CXX) -c CRam.cpp -o ram.o -Ofast -Wall 
+	$(CXX) -c $(SRC)/CRam.cpp -o ram.o -Ofast -Wall 
 temperature:
-	$(CXX) -c CTemperature.cpp -o temperature.o -Ofast -Wall
+	$(CXX) -c $(SRC)/CTemperature.cpp -o temperature.o -Ofast -Wall
 swap:
-	$(CXX) -c CSwap.cpp -o swap.o -Ofast -Wall  
+	$(CXX) -c $(SRC)/CSwap.cpp -o swap.o -Ofast -Wall  
 statusshooter:
 	$(CXX) -c CStatusShooter.cpp -o statusshooter.o -Ofast -Wall  

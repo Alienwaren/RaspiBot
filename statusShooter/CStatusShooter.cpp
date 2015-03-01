@@ -18,10 +18,6 @@ void CStatusShooter::readConfig()
 int CStatusShooter::addToSql(std::string cpu, std::string ram, std::string temperature, std::string swap)
 {
 	pqxx::connection dbConn(connectionString);
-	query += cpu + "," + ram + "," + temperature + "," + swap;
-	std::cout << query;
-	// pqxx::work actualQueries(query);
-	// actualQueries.commit();
 	return 0;
 }
 CStatusShooter::~CStatusShooter()
