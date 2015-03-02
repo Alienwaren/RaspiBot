@@ -28,6 +28,8 @@ int main(int argc, char const *argv[])
 		swapData.getData('N');
 		temperatureData.getTemperatureData('N');
 		processorData.ReadCpuData('N');
+		LOG(INFO) << "Addiding data to SQL";
+		usleep(1000000);
 	}
 	return status;
 }
