@@ -7,6 +7,7 @@ CStatusShooter::CStatusShooter()
 }
 void CStatusShooter::readConfig()
 {
+	LOG(INFO) << "Reading config file";
 	YAML::Node sqlConfig = configFile["sql"];
 	userName = sqlConfig["username"].as<std::string>();
 	password = sqlConfig["password"].as<std::string>();
@@ -17,6 +18,7 @@ void CStatusShooter::readConfig()
 }
 int CStatusShooter::addToSql(std::string cpu, std::string ram, std::string temperature, std::string swap)
 {
+	LOG(INFO) << "Sending data to SQL";
 	pqxx::connection dbConn(connectionString);
 	query = "INSERT INTO "+tableName+"(\"cpuFreq\",\"ramFree\",\"temperatureValue\",\"swapUsed\") VALUES(" + cpu + "," + ram + "," + temperature + "," + swap + ");";
 	pqxx::work sender(dbConn);

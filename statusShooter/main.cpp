@@ -18,53 +18,56 @@ Read config from file (standard path)
 #include <syslog.h>
 #include <string.h>
 
-pid_t pid, sid;
-void forkOff()
+
+int main(int argc, char const *argv[])
 {
-	pid = fork();
-	if(pid < 0)
-	{
-		exit(-1);
-	}
-	if(pid > 0)
-	{
-		exit(0);
-	}
-	umask(0);
-	sid = setsid();
-	// google::InitGoogleLogging(argv[0]);
-	if(sid < 0)
-	{
-		// LOG(ERROR) << "Cannot set sid, exiting";
-		exit(-1);
-	}
-	if((chdir("/")) < 0)
-	{
-		// LOG(ERROR) << "Cannot change diretctory to /";
-		exit(-1);
-	}
+    google::InitGoogleLogging(argv[0]);
+    google::InstallFailureSignalHandler();
+    pid_t pid = 0, sid = 0;
+    CCpu processorData;
+    CRam ramData;
+    CSwap swapData;
+    CTemperature temperatureData;
+    CStatusShooter shooter;
+    int status = 0;
+    pid = fork();
+    if(pid < 0)
+    {
+        std::cout << "Cannot fork off" << std::endl;
+        LOG(FATAL) << "Cannot fork off";
+        exit(-1);
+    }
+    if(pid > 0)
+    {
+        LOG(INFO) << "forked succesfully";
+        std::cout << "forked succesfully" << std::endl;
+        exit(0);
+    }
+    umask(0);
+    sid = setsid();
+
+    if(sid < 0)
+    {
+        std::cout << "cannot set session ID" << std::endl;
+        LOG(FATAL) << "Cannot set sid, exiting";
+        exit(-1);
+    }
+    if((chdir("/")) < 0)
+    {
+        std::cout << "Cannot change directory" << std::endl;
+        LOG(FATAL) << "Cannot change diretctory to /";
+        exit(-1);
+    }
     close(STDIN_FILENO);
     close(STDOUT_FILENO);
     close(STDERR_FILENO);
-        
-}
-int main(int argc, char const *argv[])
-{
-	forkOff();
-	CCpu processorData;
-	CRam ramData;
-	CSwap swapData;
-	CTemperature temperatureData;
-	CStatusShooter shooter;
-	int status = 0;
 	while(true)
-	{
-		shooter.addToSql(processorData.GetCpuFreqString(), ramData.getRamDataCapacity(), temperatureData.GetmStringTemp(),swapData.GetmData());
+	{  
 		ramData.getData('N');
 		swapData.getData('N');
 		temperatureData.getTemperatureData('N');
 		processorData.ReadCpuData('N');
-		LOG(INFO) << "Addiding data to SQL";
+        shooter.addToSql(processorData.GetCpuFreqString(), ramData.getRamDataCapacity(), temperatureData.GetmStringTemp(),swapData.GetmData());
 		usleep(1000000);
 	}
 	return status;
