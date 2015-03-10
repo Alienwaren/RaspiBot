@@ -27,6 +27,14 @@ int CStatusShooter::addToSql(std::string cpu, std::string ram, std::string tempe
 	// std::cout << query << std::endl;
 	return 0;
 }
+void CStatusShooter::checkSize()
+{
+    CFile dbStats("/var/lib/postgresql/9.1/main/base/16385/24604");
+	LOG(INFO) << "Checking table size";
+	dbStats.readData('M');
+	double size = dbStats.getFileSize();
+	LOG(INFO) << "Table size: " << size << "MB";
+}
 CStatusShooter::~CStatusShooter()
 {
 

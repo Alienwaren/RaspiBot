@@ -58,6 +58,7 @@ int main(int argc, char const *argv[])
         LOG(FATAL) << "Cannot change diretctory to /";
         exit(-1);
     }
+
     close(STDIN_FILENO);
     close(STDOUT_FILENO);
     close(STDERR_FILENO);
@@ -68,7 +69,8 @@ int main(int argc, char const *argv[])
 		temperatureData.getTemperatureData('N');
 		processorData.ReadCpuData('N');
         shooter.addToSql(processorData.GetCpuFreqString(), ramData.getRamDataCapacity(), temperatureData.GetmStringTemp(),swapData.GetmData());
-		usleep(1000000);
+        shooter.checkSize();
+		usleep(10000000);
 	}
 	return status;
 }
