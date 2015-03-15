@@ -31,9 +31,9 @@ void CStatusShooter::checkSize()
 {
     CFile dbStats("/var/lib/postgresql/9.1/main/base/16385/24604");
 	LOG(INFO) << "Checking table size";
-	dbStats.readData('M');
+	dbStats.readData('k');
 	double size = dbStats.getFileSize();
-	LOG(INFO) << "Table size: " << size << "MB";
+	LOG(INFO) << "Table size: " << size << "KB";
 }
 CStatusShooter::~CStatusShooter()
 {

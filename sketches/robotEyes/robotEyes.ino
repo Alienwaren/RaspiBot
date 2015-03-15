@@ -21,7 +21,11 @@ void loop() {
    {
      setServoPos(1,0);
      message = "";
-   }
+   }else if(message.indexOf("center") >= 0)
+  {
+    setServoPos(1,90);
+     message = "";
+  }
    delay(100);
 }
 void resetServo(int servoNumber)
