@@ -1,0 +1,106 @@
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\App.xbf
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\MainPage.xbf
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\Driver.xr.xml
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\Driver.exe
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\Driver.pdb
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\resources.pri
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\AppxManifest.xml
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\bin\Debug\Driver.build.appxrecipe
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\App.g.i.cs
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\App.g.cs
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\MainPage.g.i.cs
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\MainPage.g.cs
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\XamlTypeInfo.g.cs
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\App.xaml
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\App.xbf
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\XamlSaveStateFile.xml
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\MainPage.xaml
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\MainPage.xbf
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\Driver.exe
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\Driver.pdb
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\priconfig.xml
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\priconfig.xml.intermediate
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\layout.resfiles
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\layout.resfiles.intermediate
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\resources.resfiles
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\resources.resfiles.intermediate
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\pri.resfiles
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\pri.resfiles.intermediate
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\qualifiers.txt
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\qualifiers.txt.intermediate
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\overkiller\documents\visual studio 2013\Projects\Driver\Driver\obj\Debug\ProjectArchitectures.txt
+Z:\Driver\Driver\bin\Debug\App.xbf
+Z:\Driver\Driver\bin\Debug\MainPage.xbf
+Z:\Driver\Driver\bin\Debug\Driver.xr.xml
+Z:\Driver\Driver\bin\Debug\Driver.exe
+Z:\Driver\Driver\bin\Debug\Driver.pdb
+Z:\Driver\Driver\bin\Debug\resources.pri
+Z:\Driver\Driver\bin\Debug\AppxManifest.xml
+Z:\Driver\Driver\bin\Debug\Driver.build.appxrecipe
+Z:\Driver\Driver\obj\Debug\App.g.i.cs
+Z:\Driver\Driver\obj\Debug\App.g.cs
+Z:\Driver\Driver\obj\Debug\MainPage.g.i.cs
+Z:\Driver\Driver\obj\Debug\MainPage.g.cs
+Z:\Driver\Driver\obj\Debug\XamlTypeInfo.g.cs
+Z:\Driver\Driver\obj\Debug\App.xaml
+Z:\Driver\Driver\obj\Debug\App.xbf
+Z:\Driver\Driver\obj\Debug\XamlSaveStateFile.xml
+Z:\Driver\Driver\obj\Debug\MainPage.xaml
+Z:\Driver\Driver\obj\Debug\MainPage.xbf
+Z:\Driver\Driver\obj\Debug\Driver.exe
+Z:\Driver\Driver\obj\Debug\Driver.pdb
+Z:\Driver\Driver\obj\Debug\priconfig.xml
+Z:\Driver\Driver\obj\Debug\priconfig.xml.intermediate
+Z:\Driver\Driver\obj\Debug\layout.resfiles
+Z:\Driver\Driver\obj\Debug\layout.resfiles.intermediate
+Z:\Driver\Driver\obj\Debug\resources.resfiles
+Z:\Driver\Driver\obj\Debug\resources.resfiles.intermediate
+Z:\Driver\Driver\obj\Debug\pri.resfiles
+Z:\Driver\Driver\obj\Debug\pri.resfiles.intermediate
+Z:\Driver\Driver\obj\Debug\qualifiers.txt
+Z:\Driver\Driver\obj\Debug\qualifiers.txt.intermediate
+Z:\Driver\Driver\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+Z:\Driver\Driver\obj\Debug\ProjectArchitectures.txt
+E:\Driver\Driver\bin\Debug\App.xbf
+E:\Driver\Driver\bin\Debug\MainPage.xbf
+E:\Driver\Driver\bin\Debug\Driver.xr.xml
+E:\Driver\Driver\bin\Debug\Driver.exe
+E:\Driver\Driver\bin\Debug\Driver.pdb
+E:\Driver\Driver\bin\Debug\resources.pri
+E:\Driver\Driver\bin\Debug\AppxManifest.xml
+E:\Driver\Driver\bin\Debug\Driver.build.appxrecipe
+E:\Driver\Driver\obj\Debug\App.g.i.cs
+E:\Driver\Driver\obj\Debug\App.g.cs
+E:\Driver\Driver\obj\Debug\MainPage.g.i.cs
+E:\Driver\Driver\obj\Debug\MainPage.g.cs
+E:\Driver\Driver\obj\Debug\XamlTypeInfo.g.cs
+E:\Driver\Driver\obj\Debug\App.xaml
+E:\Driver\Driver\obj\Debug\App.xbf
+E:\Driver\Driver\obj\Debug\XamlSaveStateFile.xml
+E:\Driver\Driver\obj\Debug\MainPage.xaml
+E:\Driver\Driver\obj\Debug\MainPage.xbf
+E:\Driver\Driver\obj\Debug\Driver.exe
+E:\Driver\Driver\obj\Debug\Driver.pdb
+E:\Driver\Driver\obj\Debug\priconfig.xml
+E:\Driver\Driver\obj\Debug\priconfig.xml.intermediate
+E:\Driver\Driver\obj\Debug\layout.resfiles
+E:\Driver\Driver\obj\Debug\layout.resfiles.intermediate
+E:\Driver\Driver\obj\Debug\resources.resfiles
+E:\Driver\Driver\obj\Debug\resources.resfiles.intermediate
+E:\Driver\Driver\obj\Debug\pri.resfiles
+E:\Driver\Driver\obj\Debug\pri.resfiles.intermediate
+E:\Driver\Driver\obj\Debug\qualifiers.txt
+E:\Driver\Driver\obj\Debug\qualifiers.txt.intermediate
+E:\Driver\Driver\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+E:\Driver\Driver\obj\Debug\ProjectArchitectures.txt
+E:\Driver\Driver\bin\Debug\Settings.xbf
+E:\Driver\Driver\obj\Debug\Settings.g.i.cs
+E:\Driver\Driver\obj\Debug\Settings.g.cs
+E:\Driver\Driver\obj\Debug\Settings.xaml
+E:\Driver\Driver\obj\Debug\Settings.xbf
+Z:\Driver\Driver\obj\Debug\Settings.g.i.cs
+Z:\Driver\Driver\obj\Debug\Settings.g.cs
+Z:\Driver\Driver\obj\Debug\Settings.xaml
+Z:\Driver\Driver\obj\Debug\Settings.xbf
+Z:\Driver\Driver\bin\Debug\Settings.xbf

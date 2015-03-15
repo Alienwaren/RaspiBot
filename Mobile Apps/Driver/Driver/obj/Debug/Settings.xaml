@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Driver.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Driver"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Driver" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Settings" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Viewbox HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="IP address" Width="155"/>
+            </Viewbox>
+            <TextBox x:Name="_ipInput" HorizontalAlignment="Stretch" Margin="0,52,1,-0.133" TextWrapping="Wrap" InputScope="NumberFullWidth" Text="Enter Ip Address" VerticalAlignment="Stretch" Grid.RowSpan="2" Height="Auto" Width="Auto"/>
+            <Viewbox HorizontalAlignment="Stretch" Height="Auto" Margin="0,0.133,0,0" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto">
+                <TextBlock TextWrapping="Wrap" Text="Port" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="154"/>
+            </Viewbox>
+            <TextBox x:Name="_portInput" HorizontalAlignment="Stretch" Margin="0,52.167,1,52.333" Grid.Row="2" TextWrapping="Wrap" InputScope="NumberFullWidth" Text="Enter Port" VerticalAlignment="Stretch" Grid.RowSpan="3" Height="Auto" Width="Auto"/>
+            <Button x:ConnectionId='1' Content="Submit" Name="_submit"                       HorizontalAlignment="Stretch" Margin="0,41.722,0,0" Grid.Row="3" VerticalAlignment="Stretch" Grid.RowSpan="2"/>
+        </Grid>
+    </Grid>
+</Page>
+
